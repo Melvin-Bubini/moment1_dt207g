@@ -3,6 +3,7 @@ body {
     padding: 0%;
     margin: 0%;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -12,7 +13,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: green;
+    background-color: black;
 }
 
 #logo {
@@ -47,14 +48,15 @@ header {
 
 .menyLänkar {
     text-decoration: none;
-
+    color: white;
     padding: 0.5em;
+    font-size: 1.5em;
+
 }
 
 .menyLänkar:hover {
     cursor: pointer;
-    color: white;
-    border: solid black 3px;
+    font-weight: 700    
 }
 
 /*menyknapp för att öppna menyn*/
@@ -133,6 +135,7 @@ header {
         display: none;
         z-index: 1000;
         width: 50%;
+        background-color: black;
     }
 
     nav ul {
@@ -160,12 +163,18 @@ header {
    
 }
 
+/* MAIN STYLES */
+
+
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+
+
 
 /* Formulär */
 
@@ -194,6 +203,29 @@ textarea {
 }
 
 
+/* BEFINTLIGA KURSER */
+
+.courseArticle {
+    margin-bottom: 2em;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 1em;
+
+}
+
+.deleteBtn {
+    padding: 1em;
+    border: 2px solid black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(102, 0, 0);
+    cursor: pointer;
+}
+
+
 /* FOOTER STYLES */
 
 footer {
@@ -202,6 +234,7 @@ footer {
     flex-direction: column;
     width: 100vw;
     margin-top: 2em;
+    background-color: black;
 }
 
 footer p {
@@ -209,4 +242,5 @@ footer p {
     margin-left: 2em;
     font-weight: 600;
     margin-top: 1em;
+    color: white;
 }

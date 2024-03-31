@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kurser</title>
     <link rel="stylesheet" href="/css/styles.css">
     <!-- <link rel="shortcut icon" href="/pictures/favicon.ico" type="image/x-icon"> -->
 
@@ -12,14 +12,14 @@
 
 <body>
     <header>
-        <!-- <a href="index.html"><img id="logo" src="/pictures/standardLogo.svg" alt="Logga"></a> -->
-        <a id="logo-text" href="index.html">
-            <h3>Moment-3</h3>
+        <a href="index.ejs"><img id="logo" src="/standardLogo.svg" alt="Logga"></a> 
+        <a id="logo-text" href="index.ejs">
+            <h3>Moment-1</h3>
         </a>
         <ul id="bigScreenList">
-            <li><a class="menyLänkar" href="">Startida</a></li>
-            <li><a class="menyLänkar" href="">Kurser</a></li>
-            <li><a class="menyLänkar" href="">Om Sidan</a></li>
+            <li><a class="menyLänkar" href="index.ejs">Startida</a></li>
+            <li><a class="menyLänkar" href="addCourse.ejs">Kurser</a></li>
+            <li><a class="menyLänkar" href="about.ejs">Om Sidan</a></li>
         </ul>
         <button class="menu-btn open" id="open-menu">
             <span class="menu-icon">
@@ -38,9 +38,9 @@
                 <span class="menu-text">Stäng</span>
             </button>
             <ul>
-                <li><a href="">Startida</a></li>
-                <li><a href="">Kurser</a></li>
-                <li><a href="">Om Sidan</a></li>
+                <li><a href="index.ejs">Startida</a></li>
+                <li><a href="addCourse.ejs">Kurser</a></li>
+                <li><a href="about.ejs">Om Sidan</a></li>
             </ul>
         </nav>
     </header>
@@ -81,7 +81,7 @@
     <footer>
         <p>@Melvin Bubini, 2024</p>
     </footer>
-    <script type="module" src="/public/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>

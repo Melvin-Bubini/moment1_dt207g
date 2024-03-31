@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Startida</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="/pictures/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
 
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img id="logo" src="/pictures/standardLogo.svg" alt="Logga"></a> 
-        <a id="logo-text" href="index.html">
+        <a href="index.ejs"><img id="logo" src="/standardLogo.svg" alt="Logga"></a> 
+        <a id="logo-text" href="index.ejs">
             <h3>Moment-1</h3>
         </a>
         <ul id="bigScreenList">
-            <li><a class="menyLänkar" href="">Startida</a></li>
-            <li><a class="menyLänkar" href="">Kurser</a></li>
-            <li><a class="menyLänkar" href="">Om Sidan</a></li>
+            <li><a class="menyLänkar" href="index.ejs">Startida</a></li>
+            <li><a class="menyLänkar" href="addCourse.ejs">Kurser</a></li>
+            <li><a class="menyLänkar" href="about.ejs">Om Sidan</a></li>
         </ul>
         <button class="menu-btn open" id="open-menu">
             <span class="menu-icon">
@@ -38,9 +38,9 @@
                 <span class="menu-text">Stäng</span>
             </button>
             <ul>
-                <li><a href="">Startida</a></li>
-                <li><a href="">Kurser</a></li>
-                <li><a href="">Om Sidan</a></li>
+                <li><a href="index.ejs">Startida</a></li>
+                <li><a href="addCourse.ejs">Kurser</a></li>
+                <li><a href="about.ejs">Om Sidan</a></li>
             </ul>
         </nav>
     </header>
@@ -76,15 +76,18 @@
         <h2>Befintliga kurser</h2>
         <% if(locals.rows && locals.rows.length > 0) { %>
             <% locals.rows.forEach((row) => { %>
-                <article>
+                <article class="courseArticle">
                     <p>
-                        <%= row.coursecode %>
+                        <%= row.coursecode %>, <%= row.coursename %>, <%= row.progression %>
                     </p>
                     <p>
-                        postat kursnamn: <%= row.coursename %>, den <%= row.posted %>
+                        <%= row.syllabus %> 
+                    </p>
+                    <p>
+                        Postat den: <%= row.posted %>
                     </p>
                     
-                    <a href="/delete/<%= row.id %>"><button>Radera Kommentar</button></a>
+                    <a href="/delete/<%= row.id %>"><button class="deleteBtn">Radera Kommentar</button></a>
                     
                 </article>
             <% }); %>
