@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.render("index"); // Renderar EJS-filen för att lägga till en kurs
+    res.render("index"); // Renderar startsidan
 });
 
 app.get("/addCourse", (req, res) => {
@@ -52,7 +52,7 @@ app.get("/addCourse", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-    res.render("about"); // Renderar EJS-filen för att lägga till en kurs
+    res.render("about"); // Renderar om-filen 
 });
 
 

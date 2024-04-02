@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startida</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="/pictures/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -38,9 +38,9 @@
                 <span class="menu-text">Stäng</span>
             </button>
             <ul>
-                <li><a href="/">Startida</a></li>
-                <li><a href="/addCourse">Kurser</a></li>
-                <li><a href="/about">Om Sidan</a></li>
+                <li><a class="menyLänkar" href="/">Startida</a></li>
+                <li><a class="menyLänkar" href="/addCourse">Kurser</a></li>
+                <li><a class="menyLänkar" href="/about">Om Sidan</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@
                         Postat den: <%= row.posted %>
                     </p>
                     
-                    <a href="/delete/<%= row.id %>"><button class="deleteBtn">Radera Kommentar</button></a>
+                    <a href="/delete/<%= row.id %>"><button class="deleteBtn">Radera kurs</button></a>
                     
                 </article>
             <% }); %>
