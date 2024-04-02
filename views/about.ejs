@@ -12,20 +12,20 @@
 
 <body>
     <header>
-        <a href="index.ejs"><img id="logo" src="/standardLogo.svg" alt="Logga"></a> 
-        <a id="logo-text" href="index.ejs">
+        <a href="/"><img id="logo" src="/standardLogo.svg" alt="Logga"></a> 
+        <a id="logo-text" href="/">
             <h3>Moment-1</h3>
         </a>
         <ul id="bigScreenList">
-            <li><a class="menyLänkar" href="index.ejs">Startida</a></li>
-            <li><a class="menyLänkar" href="addCourse.ejs">Kurser</a></li>
-            <li><a class="menyLänkar" href="about.ejs">Om Sidan</a></li>
+            <li><a class="menyLänkar" href="/">Startida</a></li>
+            <li><a class="menyLänkar" href="/addCourse">Kurser</a></li>
+            <li><a class="menyLänkar" href="/about">Om Sidan</a></li>
         </ul>
         <button class="menu-btn open" id="open-menu">
             <span class="menu-icon">
-                <span class="bars">Startida</span>
-                <span class="bars">Kurser</span>
-                <span class="bars">Om Sidan</span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
             </span>
             <span class="menu-text">Meny</span>
         </button>
@@ -38,16 +38,16 @@
                 <span class="menu-text">Stäng</span>
             </button>
             <ul>
-                <li><a href="index.ejs">Startida</a></li>
-                <li><a href="addCourse.ejs">Kurser</a></li>
-                <li><a href="about.ejs">Om Sidan</a></li>
+                <li><a href="/">Startida</a></li>
+                <li><a href="/addCourse">Kurser</a></li>
+                <li><a href="/about">Om Sidan</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Om uppgiften</h1>
-        <article>
+        <article class="aboutArticle">
             <p>I denna uppgift har jag skapat en databasanslutning till min relationsdatabas, i detta fall PostgreSQL.
                  Denna webbplats erbjuder funktionen att lägga till och ta bort kurser från webbplatsen och den kopplade databasen. 
                  Databasen körs på Render, vilket gör att databasen alltid är tillgänglig och redo att användas. 

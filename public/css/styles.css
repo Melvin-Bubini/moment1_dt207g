@@ -173,7 +173,10 @@ main {
     flex-direction: column;
 }
 
-
+.aboutArticle {
+    padding: 0 2em;
+    text-align: center;
+}
 
 
 /* Formulär */
@@ -202,11 +205,16 @@ textarea {
     font-weight: bold;
 }
 
+label {
+    font-size: 1.5;
+    font-weight: bold;
+}
+
 
 /* BEFINTLIGA KURSER */
 
 .courseArticle {
-    margin-bottom: 2em;
+    margin: 2em 1em 0;
     font-weight: bold;
     border: 1px solid black;
     padding: 1em;

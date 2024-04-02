@@ -43,9 +43,21 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/", (req, res) => {
+    res.render("index"); // Renderar EJS-filen för att lägga till en kurs
+});
+
+app.get("/addCourse", (req, res) => {
+    res.render("addCourse", { error: "" }); // Renderar "addCourse" och skickar med en tom sträng för felmeddelandet
+});
+
+app.get("/about", (req, res) => {
+    res.render("about"); // Renderar EJS-filen för att lägga till en kurs
+});
+
 
 // skapa nytt inlägg
-app.post("/", (req, res) => {
+app.post("/addCourse", (req, res) => {
     let coursename = req.body.coursename;
     let coursecode = req.body.coursecode;
     let syllabus = req.body.syllabus;
@@ -60,21 +72,13 @@ app.post("/", (req, res) => {
             if (err) {
                 console.error(err);
                 error = "Det uppstod ett fel vid skapande av kursen";
+                res.render("addCourse", { error: error }); // Rendera "addCourse" med felmeddelande
             }
             res.redirect("/");
         });
     } else {
         error = "Du måste fylla i namn och meddelande";
-        // Använd samma kod för att läsa befintliga kurser som i GET-routen
-        connection.query("SELECT * FROM courses ORDER BY id DESC;", (err, rows) => {
-            if (err) {
-                console.error(err);
-                res.render("index", { error: "Det uppstod ett fel vid läsning av kurser", rows: [] });
-            } else {
-                // Rendera sidan med befintliga kurser och felmeddelande
-                res.render("index", { error: error, rows: rows });
-            }
-        });
+        res.render("addCourse", { error: error }); // Rendera "addCourse" med felmeddelande
     }
 
 });
